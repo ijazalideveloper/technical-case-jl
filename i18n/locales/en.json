@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "brand": "NewsHub",
+    "home": "Home",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "home": {
+    "title": "Latest News",
+    "subtitle": "Stories from around the world, updated in real time",
+    "error": "Failed to load articles. Please try again later.",
+    "seo": {
+      "title": "NewsHub — Latest News",
+      "description": "Stay up to date with the latest news from around the world."
+    }
+  },
+  "article": {
+    "back": "Back to News",
+    "readMore": "Read full article",
+    "notFound": "Article not found.",
+    "error": "Failed to load the article. Please try again later.",
+    "returnHome": "Return to Home",
+    "seoTitleFallback": "Article"
+  },
+  "pagination": {
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "auth": {
+    "modalTitle": "Sign in to NewsHub",
+    "contextMessage": "Sign in to easily read more articles like \u201c{title}\u201d",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "invalidCredentials": "Invalid email or password.",
+    "close": "Close"
+  }
+}

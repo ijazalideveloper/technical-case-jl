@@ -1,0 +1,22 @@
+{
+  "name": "jl-news-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "^4.4.0",
+    "sass": "^1.85.1",
+    "typescript": "^5.8.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^10.2.4"
+  }
+}

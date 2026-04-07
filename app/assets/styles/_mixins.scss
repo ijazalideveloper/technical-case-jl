@@ -1,0 +1,100 @@
+@use 'variables' as *;
+@use 'sass:color';
+
+// Centered max-width container
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 $space-md;
+}
+
+// Flexible flex mixin
+@mixin flex($align: center, $justify: flex-start, $direction: row, $wrap: nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+// Skeleton shimmer animation
+@mixin skeleton {
+  background: linear-gradient(90deg, $color-border 25%, color.adjust($color-border, $lightness: 3%) 50%, $color-border 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+// Responsive below a breakpoint
+@mixin below($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+// Category / tag badge
+@mixin badge {
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  background-color: $color-bg-light;
+  padding: $space-xxs $space-sm;
+  border-radius: $radius-sm;
+  text-transform: capitalize;
+}
+
+// Source label (e.g. "BBC News" above article title)
+@mixin source-label {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+// Webkit multi-line clamp
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Primary CTA button (red)
+@mixin btn-primary {
+  padding: $space-xs $space-lg;
+  background-color: $color-primary;
+  color: $color-text-white;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  transition: background-color $transition-fast, transform $transition-fast;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Secondary button (dark)
+@mixin btn-secondary {
+  padding: $space-sm $space-lg;
+  background-color: $color-bg-dark;
+  color: $color-text-white;
+  border-radius: $radius-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-bg-dark-mid;
+  }
+}
